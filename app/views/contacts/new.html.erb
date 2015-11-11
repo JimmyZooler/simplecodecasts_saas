@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well">
+      <%= form_for @contact do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <input class="form-control" id="contact_name" name="contact[name]" type="text">
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :email %>
+          <input class="form-control" id="contact_email" name="contact[email]" type="email">
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :comments %>
+          <textarea class="form-control" id="contact_comments" name="contact[comments]" ></textarea>
+        </div>
+        <%= f.submit 'Submit', class: "btn btn-default" %>
+      <% end %>
+    </div>
+  </div>
+    
+</div>
