@@ -4,17 +4,17 @@
       <%= form_for @contact do |f| %>
         <div class="form-group">
           <%= f.label :name %>
-          <input class="form-control" id="contact_name" name="contact[name]" type="text">
+          <%= f.text_field :name, class: 'form-control' %>
         </div>
         
         <div class="form-group">
           <%= f.label :email %>
-          <input class="form-control" id="contact_email" name="contact[email]" type="email">
+          <%= f.email_field :email, class: 'form-control' %>
         </div>
         
         <div class="form-group">
           <%= f.label :comments %>
-          <textarea class="form-control" id="contact_comments" name="contact[comments]" ></textarea>
+          <%= f.text_area :comments, class: 'form-control' %>
         </div>
         <%= f.submit 'Submit', class: "btn btn-default" %>
       <% end %>
